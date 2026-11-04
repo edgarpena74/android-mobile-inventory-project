@@ -14,68 +14,44 @@
 .externalNativeBuild
 .cxx
 local.properties
+
 # Compiled applications
-
 *.apk
-
 *.aab
 
 # Signing keys and certificates
-
 *.jks
-
 *.keystore
-
 *.p12
-
 *.p8
-
 *.pem
-
 *.key
 
 # Environment variables and secrets
-
 .env
-
 .env.*
-
 !.env.example
-
 secrets.properties
-
 credentials.json
-
 service-account*.json
 
 # Firebase / Google configuration
-
 google-services.json
 
 # Logs and temporary files
-
 *.log
-
 *.tmp
-
 *.temp
-
 *.bak
 
 # Operating system files
-
 .DS_Store
-
 Thumbs.db
 
 # Local databases
-
 *.db
-
 *.sqlite
-
 *.sqlite3
 
-# Node.js (if applicable)
-
+# Node.js
 node_modules/
