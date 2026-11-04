@@ -1,0 +1,81 @@
+*.iml
+.gradle
+/local.properties
+.idea/
+/.idea/caches
+/.idea/libraries
+/.idea/modules.xml
+/.idea/workspace.xml
+/.idea/navEditor.xml
+/.idea/assetWizardSettings.xml
+.DS_Store
+/build
+/captures
+.externalNativeBuild
+.cxx
+local.properties
+# Compiled applications
+
+*.apk
+
+*.aab
+
+# Signing keys and certificates
+
+*.jks
+
+*.keystore
+
+*.p12
+
+*.p8
+
+*.pem
+
+*.key
+
+# Environment variables and secrets
+
+.env
+
+.env.*
+
+!.env.example
+
+secrets.properties
+
+credentials.json
+
+service-account*.json
+
+# Firebase / Google configuration
+
+google-services.json
+
+# Logs and temporary files
+
+*.log
+
+*.tmp
+
+*.temp
+
+*.bak
+
+# Operating system files
+
+.DS_Store
+
+Thumbs.db
+
+# Local databases
+
+*.db
+
+*.sqlite
+
+*.sqlite3
+
+# Node.js (if applicable)
+
+node_modules/

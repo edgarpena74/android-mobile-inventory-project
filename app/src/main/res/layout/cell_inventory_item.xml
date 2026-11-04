@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Defines a single grid cell representing an inventory item -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="8dp"
+    android:background="@drawable/bg_item_cell"
+    android:gravity="center"
+    android:layout_margin="4dp">
+
+    <!-- Item name -->
+    <TextView
+        android:id="@+id/textViewName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Item Name"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:gravity="center" />
+
+    <!-- Amount -->
+    <TextView
+        android:id="@+id/textViewAmount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Qty: 0"
+        android:layout_marginTop="4dp"
+        android:gravity="center" />
+
+    <!-- Price -->
+    <TextView
+        android:id="@+id/textViewPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="$0.00"
+        android:layout_marginTop="2dp"
+        android:gravity="center" />
+
+    <!-- Location -->
+    <TextView
+        android:id="@+id/textViewLocation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Shelf A"
+        android:layout_marginTop="2dp"
+        android:gravity="center" />
+
+    <!-- Status indicator dot -->
+    <View
+        android:id="@+id/viewStatusDot"
+        android:layout_width="10dp"
+        android:layout_height="10dp"
+        android:layout_marginTop="6dp"
+        android:background="@android:color/holo_green_dark" />
+
+    <!-- Status text -->
+    <TextView
+        android:id="@+id/textViewStatusText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="In Stock"
+        android:textSize="12sp"
+        android:layout_marginTop="2dp"
+        android:gravity="center" />
+</LinearLayout>

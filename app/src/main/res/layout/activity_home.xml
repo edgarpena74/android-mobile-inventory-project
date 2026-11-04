@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Home screen after login.
+-->
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp"
+        android:gravity="center_horizontal">
+
+        <!-- App header -->
+        <TextView
+            android:id="@+id/textViewHeader"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Inventory App"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:padding="16dp"
+            android:textColor="@color/black" />
+
+        <!-- Welcome message ("Welcome, <username>") -->
+        <TextView
+            android:id="@+id/textViewWelcome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Welcome!"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="24dp"
+            android:textColor="@color/black" />
+
+        <!-- Row: "Enable SMS Alerts" + toggle -->
+        <LinearLayout
+            android:id="@+id/layoutSmsToggleRow"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="16dp">
+
+            <TextView
+                android:id="@+id/textViewSmsToggleLabel"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Enable SMS Alerts"
+                android:textSize="16sp"
+                android:textColor="@color/black" />
+
+            <Switch
+                android:id="@+id/switchEnableSms"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <!-- Phone number field (editable) -->
+        <EditText
+            android:id="@+id/editTextPhoneNumber"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Phone Number (###)###-####"
+            android:inputType="phone"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Button: Test SMS Notification -->
+        <Button
+            android:id="@+id/buttonTestSms"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Test SMS Notification"
+            android:layout_marginBottom="24dp" />
+
+        <!-- Button: Open Inventory -->
+        <Button
+            android:id="@+id/buttonOpenInventory"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Open Inventory"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Logout button -->
+        <Button
+            android:id="@+id/buttonLogout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Logout" />
+
+    </LinearLayout>
+</ScrollView>

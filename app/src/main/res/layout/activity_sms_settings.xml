@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:padding="24dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white">
+
+    <!-- Header -->
+    <TextView
+        android:id="@+id/textViewHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Inventory App"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:paddingBottom="16dp" />
+
+    <!-- Title -->
+    <TextView
+        android:id="@+id/textViewSmsTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="SMS Alerts"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="16dp" />
+
+    <!-- Phone label -->
+    <TextView
+        android:id="@+id/textViewPhoneLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Phone number:"
+        android:textSize="16sp" />
+
+    <!-- Phone input -->
+    <EditText
+        android:id="@+id/editTextPhone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="(000)000-0000"
+        android:inputType="phone"
+        android:maxLines="1"
+        android:layout_marginBottom="16dp" />
+
+    <!-- Enable SMS checkbox -->
+    <CheckBox
+        android:id="@+id/checkBoxSmsEnabled"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Enable low stock SMS alerts"
+        android:layout_marginBottom="24dp" />
+
+    <!-- Save button -->
+    <Button
+        android:id="@+id/buttonSaveSmsSettings"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Save Settings" />
+
+</LinearLayout>

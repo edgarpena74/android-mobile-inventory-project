@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Rounded, subtle card-like background for each inventory grid cell -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android" android:shape="rectangle">
+
+    <!-- White fill for clean contrast -->
+    <solid android:color="#FFFFFFFF" />
+
+    <!-- Soft rounded corners -->
+    <corners android:radius="10dp" />
+
+    <!-- Light gray border for separation -->
+    <stroke
+        android:width="1dp"
+        android:color="#FFDDDDDD" />
+
+    <!-- Inner padding so text doesn’t touch the border -->
+    <padding
+        android:left="8dp"
+        android:top="8dp"
+        android:right="8dp"
+        android:bottom="8dp" />
+</shape>

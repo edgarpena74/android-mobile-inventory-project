@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@android:color/white"
+    android:padding="16dp">
+
+    <!-- Header with Inventory App title and Logout button -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="8dp">
+
+        <!-- App header -->
+        <TextView
+            android:id="@+id/textViewHeader"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Inventory App"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:layout_centerInParent="true"
+            android:textColor="@color/black" />
+
+        <!-- Refined Logout button (smaller, light gray, subtle look) -->
+        <Button
+            android:id="@+id/buttonLogout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="4dp"
+            android:backgroundTint="@android:color/transparent"
+            android:paddingHorizontal="12dp"
+            android:paddingVertical="4dp"
+            android:text="Logout"
+            android:textColor="@android:color/darker_gray"
+            android:textSize="10sp" />
+    </RelativeLayout>
+
+    <!-- Selected item label -->
+    <TextView
+        android:id="@+id/textViewSelectedItem"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Selected: none"
+        android:padding="4dp"
+        android:textStyle="bold" />
+
+    <!-- Inventory grid -->
+    <GridView
+        android:id="@+id/gridViewInventory"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:numColumns="2"
+        android:horizontalSpacing="8dp"
+        android:verticalSpacing="8dp"
+        android:stretchMode="columnWidth" />
+
+    <!-- Input fields -->
+    <EditText
+        android:id="@+id/editTextItemName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Item name" />
+
+    <EditText
+        android:id="@+id/editTextItemAmount"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Amount"
+        android:inputType="number" />
+
+    <EditText
+        android:id="@+id/editTextItemPrice"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Price"
+        android:inputType="numberDecimal" />
+
+    <EditText
+        android:id="@+id/editTextItemLocation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Location" />
+
+    <!-- CRUD buttons -->
+    <Button
+        android:id="@+id/buttonAddItem"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Add Item" />
+
+    <Button
+        android:id="@+id/buttonUpdateItem"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Update Item" />
+
+    <Button
+        android:id="@+id/buttonDeleteItem"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Delete Item" />
+
+</LinearLayout>

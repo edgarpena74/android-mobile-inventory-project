@@ -1,0 +1,88 @@
+plugins {
+    alias(libs.plugins.android.application)
+// Kotlin Android plugin — used when writing Kotlin source files.
+// Not needed here since the app is written entirely in Java.
+//    alias(libs.plugins.kotlin.android)
+
+// Kotlin Compose plugin — enables Jetpack Compose for Kotlin-based UI.
+// We’re using XML layouts instead, so this can stay disabled.
+//    alias(libs.plugins.kotlin.compose)
+}
+
+android {
+    namespace = 'com.example.cs360projectthreeedgarpena'
+    // OLD (deprecated in Groovy DSL)
+    // compileSdk 34
+
+    // NEW
+    compileSdk = 34
+
+    defaultConfig {
+        // OLD
+        // applicationId "com.example.cs360projectthreeedgarpena"
+        // minSdk 24
+        // targetSdk 34
+        // versionCode 1
+        // versionName "1.0"
+
+        // NEW
+        applicationId = "com.example.cs360projectthreeedgarpena"
+        minSdk = 26
+        targetSdk = 34
+        versionCode = 1
+        versionName = "1.0"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_11
+        targetCompatibility JavaVersion.VERSION_11
+    }
+
+// Kotlin compiler settings (not needed since we're using Java only)
+//    kotlinOptions {
+//        jvmTarget = '11'
+//    }
+
+// Enables Jetpack Compose (Kotlin UI framework) — commented out since we use XML layouts
+//    buildFeatures {
+//        compose true
+//    }
+}
+dependencies {
+    //
+    // Commenting out kotlin/compose deps to avoid toolchain activation
+//    implementation libs.androidx.core.ktx
+//    implementation libs.androidx.lifecycle.runtime.ktx
+//    implementation libs.androidx.activity.compose
+//    implementation platform(libs.androidx.compose.bom)
+//    implementation libs.androidx.compose.ui
+//    implementation libs.androidx.compose.ui.graphics
+//    implementation libs.androidx.compose.ui.tooling.preview
+//    implementation libs.androidx.compose.material3
+
+    // Core UI and components for xml-based android apps
+    implementation libs.androidx.fragment
+    implementation libs.material
+    implementation libs.androidx.appcompat
+    implementation libs.androidx.constraintlayout
+
+    // unit test
+    testImplementation libs.junit
+
+    //Instrumented test
+    androidTestImplementation libs.androidx.junit
+    androidTestImplementation libs.androidx.espresso.core
+
+    //
+    //
+//    androidTestImplementation platform(libs.androidx.compose.bom)
+//    androidTestImplementation libs.androidx.compose.ui.test.junit4
+//    debugImplementation libs.androidx.compose.ui.tooling
+//    debugImplementation libs.androidx.compose.ui.test.manifest
+}
